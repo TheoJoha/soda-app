@@ -19,6 +19,12 @@ const Soda = {
     },
     createSoda: function(newSoda) {
         this.data.push(newSoda)
+    },
+    update: function(index, updates) {
+        this.data[index] = updates
+    },
+    destroy: function(index) {
+        this.data.splice(index, 1)
     }
 }
 

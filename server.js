@@ -5,7 +5,7 @@ require("dotenv").config()
 const express = require("express")
 const morgan = require("morgan")
 const SodaRouter = require("./controllers/soda")
-// const methodOverride = require("method-override")
+const methodOverride = require("method-override")
 
 
 //--------------------------------
@@ -22,6 +22,7 @@ const app = express()
 // middleware
 //--------------------------------
 app.use(morgan("tiny"))
+app.use(methodOverride("_method"))
 app.use("/static", express.static("public"))
 app.use(express.urlencoded({extended: true})) // parse html form data -> req.body
 app.use("/soda", SodaRouter)

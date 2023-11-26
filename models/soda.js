@@ -1,9 +1,9 @@
 const Soda = {
     data: [
         {
-            name: "Orange oda",
+            name: "Orange soda",
             color: "orange",
-            readyToSEll: true
+            readyToSell: true
         },
         {
             name: "Root beer",
@@ -16,6 +16,9 @@ const Soda = {
     },
     getOne: function(index){
         return this.data[index]
+    },
+    createSoda: function(newSoda) {
+        this.data.push(newSoda)
     }
 }
 
